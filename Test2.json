@@ -1,0 +1,11 @@
+{
+  "Data": [
+    {
+      "send_document_button":"//label[@class='btn btn-sm btn-toggle active']",
+      "header_title_path":"//div[@class=\"document-general-type-info\"]//div[@class=\"title\"]"
+    }
+
+
+  ]
+}
+

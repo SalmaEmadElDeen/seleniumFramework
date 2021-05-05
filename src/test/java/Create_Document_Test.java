@@ -13,15 +13,15 @@ public class Create_Document_Test {
     Create_Document_Page d_page;
     Home home;
     BrowserActions browzer_action= new BrowserActions();
-    //@Parameters("browzer")
+    @Parameters("browzer")
     @BeforeClass
-    void Set_Up() throws Exception
+    void Set_Up(String browzer) throws Exception
     {
 
        /* WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
         driver.manage().window().maximize();*/
-       driver= browzer_action.InitializeWebDriver("Chrome");
+       driver= browzer_action.InitializeWebDriver(browzer);
        browzer_action.MaximizeBrowserScreen();
         home=new Home(driver);
         d_page=new Create_Document_Page(driver);
@@ -83,7 +83,7 @@ public class Create_Document_Test {
                {
                        "20-Day Preliminary Notice",
                        "Notice of Intent to Lien",
-                       "Lien / Bond Claim",
+                       //"Lien / Bond Claim",
                        "Lien Waiver"
 
 
